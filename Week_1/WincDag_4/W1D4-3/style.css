@@ -1,5 +1,7 @@
 #burgerIcon {
-     display: block;     
+     display: block;
+     height: 100px;
+     width: 100px;     
 }
 #home {
     background-color: cornflowerblue;
