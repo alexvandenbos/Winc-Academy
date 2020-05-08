@@ -1,8 +1,8 @@
 #burgerIcon {
-     display: block;
+     display: block;     
 }
-#burgerList {
-    display: none;
+#home {
+    background-color: cornflowerblue;
 }
 .red {
     background-color: red;
@@ -16,7 +16,33 @@
 .blue {
     background-color: blue;
 }
+#red {
+    background-color: red;
+}
+#grey {
+    background-color: grey;
+}
+#green {
+    background-color: green;
+}
+#blue {
+    background-color: blue;
+}
+.button {
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    margin: 2px;
+    padding: 20px;
+}
 body {
     width: 400px;
     background-color: cornflowerblue;
+    position: relative;
+}
+.dropdowncontent:hover #burgerList{
+    display: inline;
+  }
+#burgerList {
+    display: none;
 }

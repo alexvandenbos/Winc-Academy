@@ -2,20 +2,14 @@
 const burgerImg = document.querySelector('#burgerIcon');
 const burgerList = document.querySelector('#burgerList');
 const bodyEL = document.querySelector('body');
+//haalt buttons op
+const liGreyChoice = document.querySelector('#greyChoice');
+const liGreenChoice = document.querySelector('#greenChoice');
+const liRedChoice = document.querySelector('#redChoice');
+const liBlueChoice = document.querySelector('#blueChoice');
 //array met de kleuropties
 const burgerListItems = burgerList.children;
-const burgerListItemArray = Array.from(burgerListItems)
-// array in losse variabelen
-a = burgerListItemArray[0]
-console.log(a);
-b = burgerListItemArray[1]
-console.log(b);
-c = burgerListItemArray[2]
-console.log(c);
-d = burgerListItemArray[3]
-console.log(d);
-e = burgerListItemArray[4]
-console.log(e)
+let burgerListItemArray = Array.from(burgerListItems);
 //hamburger klikbaar icoontje = zichtbaar/onzichtbaar
 const toggleBurgerList = () => {
     if (burgerList.style.display === "none") {
@@ -25,26 +19,34 @@ const toggleBurgerList = () => {
         }
     }
 //kleur van body grijs
-const addBurgerListItemColorGrey = () => {
-    bodyEL.classList.toggle('grey');
-}
-//kleur van body groen
-const addBurgerListItemColorGreen = () => {
-    bodyEL.classList.toggle('green');
-}
-//kleur van body rood
-const addBurgerListItemColorRed = () => {
-    bodyEL.classList.toggle('red');
-}
-//kleur van body blauw
-const addBurgerListItemColorBlue = () => {
-    bodyEL.classList.toggle('blue');
+const addBurgerListItemColor = () => {
+    let currentcolor = bodyEL.classList;
+    if (liGreyChoice.checked && currentcolor != 'grey') {
+        currentcolor.remove('green', 'red', 'blue')
+        currentcolor.add('grey')
+        toggleBurgerList()
+        console.log("grey is checked")
+    } else if (liGreenChoice.checked && currentcolor != 'green') {
+        currentcolor.remove('grey', 'red', 'blue')
+        currentcolor.add('green')
+        toggleBurgerList()
+        console.log("green is checked")
+    } else if (liRedChoice.checked && currentcolor != 'red') {
+        currentcolor.remove('green', 'grey', 'blue')
+        currentcolor.add('red')
+        toggleBurgerList()
+        console.log("red is checked")
+    } else if (liBlueChoice.checked && currentcolor != 'blue') {
+        currentcolor.remove('green', 'red', 'grey')
+        currentcolor.add('blue')
+        toggleBurgerList()
+        console.log("blue is checked")
+    } else {
+        console.log("Deze kleur is al geselecteerd, of je hebt niet op de radiobutton geklikt");
+    }
 }
 //event listener/ activatie functie/ klikbased
 burgerImg.addEventListener('click', toggleBurgerList);
-a.addEventListener('click', toggleBurgerList);
-b.addEventListener('click', addBurgerListItemColorGrey);
-c.addEventListener('click', addBurgerListItemColorGreen);
-d.addEventListener('click', addBurgerListItemColorRed);
-e.addEventListener('click', addBurgerListItemColorBlue);
-//burgerListItemArray.forEach(element => addEventListener('click', toggleBurgerList));
+burgerListItemArray[0].addEventListener('click', toggleBurgerList);
+burgerListItemArray.shift()
+burgerListItemArray.forEach(element => element.addEventListener('click', addBurgerListItemColor))
