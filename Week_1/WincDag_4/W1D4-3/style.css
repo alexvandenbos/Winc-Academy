@@ -40,11 +40,7 @@
 body {
     width: 400px;
     background-color: cornflowerblue;
-    position: relative;
 }
-.dropdowncontent:hover #burgerList{
-    display: inline;
-  }
 #burgerList {
     display: none;
 }
