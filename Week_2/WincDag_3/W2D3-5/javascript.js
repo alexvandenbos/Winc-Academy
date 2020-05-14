@@ -106,22 +106,26 @@ const superheroes = [
     }
 ]
 const AllNames = superheroes.map( x => x.name)
-console.log("check if array: " + (Array.isArray(AllNames)))
-////////////////////////////////////////////////////////////////////////////////////
-/*const lightWeight = () => {  
-  for (let i = 0; i < superheroes.length; i++) {
-    if (superheroes[i].weight < 190) {
-      console.log(superheroes[i].name + superheroes[i].weight) 
-    }    
-  }
-}*/
+//console.log("check if array: " + (Array.isArray(AllNames)))
+
 const smallWeight = superheroes.filter(x => {
   return x.weight < 190;
 });
-//console.log(smallWeight)
+//console.log("check if array: " + (Array.isArray(smallWeight)))
+
 const heavyWeight = superheroes.filter(x => {
-  return x.weight === '200'
-}).filter(x => {
-  return x.name === "Thor"
-})
-console.log(heavyWeight)
+  return x.weight === '200' && x.name}).map(x => {
+    let newarr = {};
+    newarr[x.name] = x.weight;
+    return newarr;
+  });
+//console.log(heavyWeight);
+//console.log("check if array: " + (Array.isArray(heavyWeight)))
+const firstAppearance = superheroes.map(x => {
+  return x.first_appearance
+  });
+console.log(firstAppearance)
+console.log("check if array: " + (Array.isArray(firstAppearance)))
+//.reduce((acc, random) => {
+//  return acc + random.name;
+//}, 0);
