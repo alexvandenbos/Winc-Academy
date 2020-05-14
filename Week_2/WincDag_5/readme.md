@@ -1,4 +1,4 @@
-Aan deze eisen moet jouw project voldoen:
+# Aan deze eisen moet jouw project voldoen:
 
 1. Als gebruiker wil ik een lijst kunnen zien van de beschikbare films **met de poster van de film.**
     - Check de data: elke film in de database heeft een link naar de juiste poster.
