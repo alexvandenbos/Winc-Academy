@@ -69,7 +69,7 @@ const movieDatabase = [
     "Type": "series",
     "Poster": "https://m.media-amazon.com/images/M/MV5BNzk4Nzg3NjMyMV5BMl5BanBnXkFtZTcwMjk3MjU0Mg@@._V1_SX300.jpg"
     }, 
-        {
+    {
     "Title": "The Avengers",
     "Year": "2012",
     "imdbID": "tt0848228",
@@ -202,7 +202,7 @@ const movieDatabase = [
     "Type": "movie",
     "Poster": "https://m.media-amazon.com/images/M/MV5BMzIxMDkxNDM2M15BMl5BanBnXkFtZTcwMDA5ODY1OQ@@._V1_SX300.jpg"
     },
-        {
+    {
     "Title": "The Princess Bride",
     "Year": "1987",
     "imdbID": "tt0093779",

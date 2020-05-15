@@ -1,8 +1,7 @@
 const unorderedListLocation = document.querySelector("#listed-movies")
-
-
-const addMoviesToDom = (selectedMovies) => { 
-    selectedMovies.forEach(movie => {
+const navInputNameLocation = document.getElementsByName("movie")
+const addMoviesToDom = (eachMovie) => { 
+    eachMovie.forEach(movie => {
         let titleLink = "https://www.imdb.com/title/" + movie.imdbID
         let newLi = document.createElement("li")
         let newA = document.createElement("a")
@@ -16,3 +15,44 @@ const addMoviesToDom = (selectedMovies) => {
     });          
 };
 addMoviesToDom(movieDatabase)
+const movieTitleArray = (eachMovie, wordToFilter) => {
+    let x = eachMovie.filter(movie => movie.Title.includes(wordToFilter))
+    console.log(x)
+    addMoviesToDom(x)
+}
+const movieYearArray = (eachMovie) => {
+    let x = eachMovie.filter(movie => movie.Year >= 2014)
+    console.log(x)
+    addMoviesToDom(x)
+}
+const removeMovies = (eachMovie) => {
+    unorderedListLocation.innerHTML='';
+}
+const domRadioSelection = (radioSelection) => {
+    switch (radioSelection.srcElement.value) {
+        case "nieuwsteFilms" : 
+            removeMovies()           
+            movieYearArray(movieDatabase)      
+        break;
+        case "Avengers" :
+            removeMovies()   
+            movieTitleArray(movieDatabase, radioSelection.srcElement.value)          
+        break;
+        case "X-Men" :
+            removeMovies()   
+            movieTitleArray(movieDatabase, radioSelection.srcElement.value)
+        break;
+        case "Princess" :
+            removeMovies()   
+            movieTitleArray(movieDatabase, radioSelection.srcElement.value)
+        break;
+        case "Batman" :
+            removeMovies()
+            movieTitleArray(movieDatabase, radioSelection.srcElement.value)           
+            break;
+        default:
+            addMoviesToDom(movieDatabase)
+      }
+}
+let inputArray = Array.from(navInputNameLocation);
+inputArray.forEach(element => element.addEventListener('change', domRadioSelection))

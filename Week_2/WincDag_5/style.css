@@ -1,13 +1,42 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('oriental-tiles.png');
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-row-gap: 1em;
+}
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0px 50px 0px 50px;
+    width: 100%;
+    text-align: center;
+}
+nav {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+.movieParent {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 h1 {
-    color: red;
+    color:#cc0000;
+}
+#listed-movies {
+    padding: 0;    
 }
 #listed-movies li{
-    float: left;
     list-style-type: none;
+    display: inline;    
 }
-main{
-
-}
-footer{
-
+img{
+    height: 450px;
+    width: 300px;
+    padding: 1px;
 }
