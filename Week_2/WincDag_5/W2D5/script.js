@@ -34,24 +34,10 @@ const domRadioSelection = (radioSelection) => {
             removeMovies()           
             movieYearArray(movieDatabase)      
         break;
-        case "Avengers" :
+        default:
             removeMovies()   
             movieTitleArray(movieDatabase, radioSelection.srcElement.value)          
         break;
-        case "X-Men" :
-            removeMovies()   
-            movieTitleArray(movieDatabase, radioSelection.srcElement.value)
-        break;
-        case "Princess" :
-            removeMovies()   
-            movieTitleArray(movieDatabase, radioSelection.srcElement.value)
-        break;
-        case "Batman" :
-            removeMovies()
-            movieTitleArray(movieDatabase, radioSelection.srcElement.value)           
-            break;
-        default:
-            addMoviesToDom(movieDatabase)
       }
 }
 let inputArray = Array.from(navInputNameLocation);
