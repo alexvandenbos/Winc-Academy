@@ -1,0 +1,13 @@
+const API_KEY = `a7107738594269d193bcdea1d2cfcac7`;
+const getData = async () => {
+    const apiURL = `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`
+    try {        
+        const res = await fetch(apiURL, {method: "GET"});
+        const data = await res.json();
+        console.log("The data is retrieved");
+        return data
+    } catch (err) {
+        console.log(err);
+        return error
+    }
+};
