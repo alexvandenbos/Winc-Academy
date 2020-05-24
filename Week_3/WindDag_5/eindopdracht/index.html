@@ -2,8 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="api-client.js"></script>
-       
+    <script type="text/javascript" src="api-client.js"></script>       
     <link href="style.css" rel="stylesheet" type ='text/css' />
     <title>ToDoList</title>
 </head>
@@ -12,10 +11,9 @@
     <wrapper id="wrapper">
         <h1>My to do list</h1>
         <form id="task-input">
-            <label for="to-do-task"><h3>edit tasks</h3></label><br>
-            <input type="text" id="to-do-task" name="to-do-task">
-            <input type="submit" action="sendToDatabase" value="add task">
-        </form>
+            <input name="to-do-task" type="text" id="to-do-task-id"></input>
+            <button name="to-do-task" type="button" onclick="postData()">add task</button>            
+        </form>        
         <h3>my list</h3>
         <ul id="opdrachten-list">
         </ul>    
