@@ -18,10 +18,7 @@ const pushListItemToDom = (task, taskid) => {
     const listLocation = document.querySelector('#opdrachten-list')   
     let newLi = document.createElement("li")
     let newImg = document.createElement("img")
-    newImg.setAttribute('src', 'trash-delete-icon.jpg');
     newImg.setAttribute('alt', 'delete icon');
-    newImg.setAttribute('height', '15px');
-    newImg.setAttribute('width', '15px');
     newImg.setAttribute('onclick', `deleteData("${taskid}");`);
     newLi.innerHTML = task;
     newLi.appendChild(newImg)    
