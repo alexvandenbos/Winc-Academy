@@ -11,7 +11,6 @@ const getData = async () => {
         return error
     }
 };
-
 const postData = async () => {
     let taskdescription = document.getElementById('to-do-task-id').value
     console.log(`Ik post: ${taskdescription}`)
@@ -28,7 +27,6 @@ const postData = async () => {
     emptyList()
     result()
 };
-
 const deleteData = async (taskid) => {
     const apiURL = `https://wincacademydatabase.firebaseio.com/${API_KEY}/Tasks/${taskid}.json`
     let response = await fetch(apiURL, {
@@ -39,3 +37,43 @@ const deleteData = async (taskid) => {
     emptyList()
     result()
 }
+const postSelectionfromfalse = async (taskid) => {
+    const apiURL = `https://wincacademydatabase.firebaseio.com/${API_KEY}/Tasks/${taskid}/done.json`
+    let response = await fetch(apiURL, {
+        method: 'PUT', 
+        headers: {'Content-Type': 'application/json;charset=utf-8'},
+        body: JSON.stringify(
+            true
+        )
+    })
+    console.log(response)
+    emptyList()
+    result()
+};
+const postSelectionfromtrue = async (taskid) => {
+    const apiURL = `https://wincacademydatabase.firebaseio.com/${API_KEY}/Tasks/${taskid}/done.json`
+    let response = await fetch(apiURL, {
+        method: 'PUT', 
+        headers: {'Content-Type': 'application/json;charset=utf-8'},
+        body: JSON.stringify(
+            false
+        )
+    })
+    console.log(response)
+    emptyList()
+    result()
+};
+const updateText = async (taskid) => {
+    changedText = document.getElementById(taskid).value
+    const apiURL = `https://wincacademydatabase.firebaseio.com/${API_KEY}/Tasks/${taskid}/description.json`
+    let response = await fetch(apiURL, {
+        method: 'PUT', 
+        headers: {'Content-Type': 'application/json;charset=utf-8'},
+        body: JSON.stringify(
+            changedText
+        )
+    })
+    console.log(response)
+    emptyList()
+    result()
+};

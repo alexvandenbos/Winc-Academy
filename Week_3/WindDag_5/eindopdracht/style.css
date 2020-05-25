@@ -1,5 +1,45 @@
+* {
+    font-family: Arial;
+    border-radius: 3px;
+   }
+#wrapper {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+#opdrachten-list {
+    list-style-type: none;
+    padding-left: 0;
+    max-width: 850px;
+}
+#opdrachten-list li{
+    background-color: darkcyan;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
 #opdrachten-list li img{
-    height: 15px;
-    width: 15px;
+    height: 30px;
+    width: 30px;
+    padding: 5px;
     content:url("trash-delete-icon.jpg");
+}
+#opdrachten-list li button{
+    height: 30px;
+}
+#opdrachten-list li p{
+    color: white;
+    justify-self: left;
+}
+#opdrachten-list li input{
+    margin: 10px;
+    height: 30px;
+}
+.true p {
+    text-decoration: line-through;
+}
+.false {
+    text-decoration: none;
+    
 }

@@ -8,23 +8,55 @@ const result = () => {
         }));
         console.log("After the tasks array", tasks);    
         tasks.forEach(task => {
-            pushListItemToDom(task.description, task.id)
+            pushListItemToDom(task.description, task.id, task.done)
         })
     }); 
 }
-
-//maakt list-items aan met tasks
-const pushListItemToDom = (task, taskid) => {    
+//maakt checkbox aan
+function createCheckbox (taskid, status) {    
+    let newCheckbox = document.createElement("input")
+    newCheckbox.setAttribute('type', 'checkbox')
+    newCheckbox.setAttribute('class', 'status')    
+    newCheckbox.setAttribute('onclick', `postSelectionfrom${status}("${taskid}");`)    
+    return newCheckbox    
+}
+//maakt changetext box
+function createCustomTextArea (taskid) {
+    let newTextArea = document.createElement("input")
+    newTextArea.setAttribute('type', 'text')
+    newTextArea.setAttribute('class', 'change-textarea')
+    newTextArea.setAttribute('name', 'custom-text')
+    newTextArea.setAttribute('id', `${taskid}`)
+    return newTextArea    
+}
+//maakt changetext button
+function createCustomTextSubmitButton (taskid) {
+    let newTextAreaSubmit = document.createElement("button")
+    newTextAreaSubmit.setAttribute('type', 'button')
+    newTextAreaSubmit.setAttribute('name', 'custom-text')
+    newTextAreaSubmit.setAttribute('class', 'change-textarea-button')
+    newTextAreaSubmit.setAttribute('onclick', `updateText("${taskid}")`);
+    newTextAreaSubmit.innerHTML = "Change to"
+    return newTextAreaSubmit
+}
+//maakt list-items aan
+const pushListItemToDom = (task, taskid, status) => {  
     const listLocation = document.querySelector('#opdrachten-list')   
     let newLi = document.createElement("li")
-    let newImg = document.createElement("img")
+    newLi.setAttribute('class', status)
+    
+    let newImg = document.createElement("img")    
     newImg.setAttribute('alt', 'delete icon');
     newImg.setAttribute('onclick', `deleteData("${taskid}");`);
-    newLi.innerHTML = task;
-    newLi.appendChild(newImg)    
+    let newText = document.createElement("p")
+    newText.innerHTML = task;
+    newLi.appendChild(createCheckbox(taskid, status)) 
+    newLi.appendChild(newText)
+    newLi.appendChild(createCustomTextArea(taskid)) 
+    newLi.appendChild(createCustomTextSubmitButton(taskid))  
+    newLi.appendChild(newImg) 
     listLocation.appendChild(newLi)   
 };
-
 //maakt de lijst leeg
 const emptyList = () => {
     const listLocation = document.querySelector('#opdrachten-list')
