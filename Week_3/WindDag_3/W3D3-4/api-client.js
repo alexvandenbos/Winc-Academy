@@ -1,4 +1,4 @@
-const API_KEY = `a7107738594269d193bcdea1d2cfcac7`;
+const API_KEY = ``;
 const IMBD_LIJST = ['tt6105098', 'tt7286456', 'tt1979376']
 const getData = async () => {
     const apiURL = `https://api.themoviedb.org/3/genre/movie/list?api_key=${API_KEY}`
