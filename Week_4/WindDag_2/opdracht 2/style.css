@@ -1,0 +1,43 @@
+.randomhover:hover{
+    background-color: lightblue;
+    padding: 5px;
+    font-weight: bold;
+}
+.rodelink:active{
+    color: red;
+    font-style: italic;
+}
+.gelelink:visited {
+    color: yellow;
+}
+.navwrapper {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: baseline;
+    padding-left: 0px;
+}
+.navwrapper li{
+    flex-basis: 200px;    
+}
+nav {
+    background-color: darkblue;
+    color: white;
+}
+nav ul li:hover{
+    background-color: lightblue;
+}
+.currentpage{
+    background-color: #6699cc;
+}
+.searchfield:focus{
+    border-width: 3px;
+    border-color: aquamarine;
+}
+.searchbuttonli:hover {
+    background-color: darkblue;
+}
+button {
+    padding: 5px;
+}
