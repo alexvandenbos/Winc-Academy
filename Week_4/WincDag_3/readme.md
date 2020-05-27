@@ -1,0 +1,3 @@
+- footer testimonial **paars/blauw**:  #686de0
+- Achtergrond pagina **grijs**: #c3cfe2
+- Achtergrondkleur tekst **wit**: #fff
