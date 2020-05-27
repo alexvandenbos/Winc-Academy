@@ -1,0 +1,68 @@
+body {
+	background-color: #c3cfe2;
+	margin: 0;
+	font-family: BebasNeue, Helvetica, Sans sans-serif;
+}
+
+a {
+	color: white;
+	left: 20px;
+	position: relative;
+	padding-right: 25px;
+}
+
+ul {
+	display: flex;
+	justify-content: flex-end;
+	/* align-items: flex-end; */
+	flex-direction: column;
+	/* position: sticky; */
+	margin-top: 100px;
+	margin-right: 0px;
+}
+
+li {
+	color: white;
+	list-style: none;
+	padding: 15px;
+}
+
+.fa-laptop-code::before {
+	font-family: "Font Awesome 5 Free" content "\f5fc";
+}
+.fa-twitter::before {
+	font-family: "Font Awesome 5 Brands" content "\f099";
+}
+.fa-linkedin-in::before {
+	font-family: "Font Awesome 5 Brands" content "\f0e1";
+}
+.fa-facebook-f::before {
+	font-family: "Font Awesome 5 Brands" content "\f39e";
+}
+.fa-github::before {
+	font-family: "Font Awesome 5 Brands" content "\f09b";
+}
+
+.social-media.blog {
+	background-color: #e17b77;
+}
+
+.social-media.facebook {
+	background-color: #3b5998;
+}
+
+.social-media.twitter {
+	background-color: #00aced;
+}
+
+.social-media.github {
+	background-color: #333;
+}
+
+.social-media.linkedin {
+	background-color: #007bb6;
+}
+
+#oneitem {
+	transform: translate (300px, 300px);
+}
