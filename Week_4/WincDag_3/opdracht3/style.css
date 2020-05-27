@@ -4,29 +4,35 @@ body {
 	font-family: BebasNeue, Helvetica, Sans sans-serif;
 }
 
-a {
+wrapper, ul {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	right: 0px;
+	width: 240px;
+}
+wrapper ul li a {
 	color: white;
-	left: 20px;
-	position: relative;
-	padding-right: 25px;
+	display: inline-block;
+	position: absolute;
+	transform: translatex(30px);
+	
 }
-
-ul {
-	display: flex;
-	justify-content: flex-end;
-	/* align-items: flex-end; */
-	flex-direction: column;
-	/* position: sticky; */
-	margin-top: 100px;
-	margin-right: 0px;
-}
-
-li {
+wrapper ul li {
+	display: block;
 	color: white;
 	list-style: none;
 	padding: 15px;
+	width: 100%;
+	transform: translateX(200px);
+	
+}
+.social-media.blog:hover,  .social-media.facebook:hover,  .social-media.twitter:hover, .social-media.github:hover, .social-media.linkedin:hover{
+	transform: translateX(0px);
+	transition: transform .3s ease-in-out;
 }
 
+/* ,   .social-media.linkedin:hover */
 .fa-laptop-code::before {
 	font-family: "Font Awesome 5 Free" content "\f5fc";
 }
@@ -46,23 +52,15 @@ li {
 .social-media.blog {
 	background-color: #e17b77;
 }
-
 .social-media.facebook {
 	background-color: #3b5998;
 }
-
 .social-media.twitter {
 	background-color: #00aced;
 }
-
 .social-media.github {
 	background-color: #333;
 }
-
 .social-media.linkedin {
 	background-color: #007bb6;
-}
-
-#oneitem {
-	transform: translate (300px, 300px);
 }
