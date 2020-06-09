@@ -20,6 +20,7 @@ class Mycontainer extends React.Component {
         }
         this.moveItemToCart = this.moveItemToCart.bind(this)
         this.deleteItem = this.deleteItem.bind(this)
+        this.addItemtoGroceryItems = this.addItemtoGroceryItems.bind(this)
     }
     moveItemToCart(id) {
         this.setState(prevState => ({
@@ -32,19 +33,31 @@ class Mycontainer extends React.Component {
             ShoppingListItems: prevState.ShoppingListItems.filter(item => item.id !== id)
         }));
     }
-    // let prevState = this.state.ShoppingListItems
-    // let newState = prevState.filter(item => item.id != id)
-    // this.setState(prevState.concat(newState))
-    // console.log(prevState, newState)
-
-
+    addItemtoGroceryItems = function (value) {
+        let ItemIndex = Math.max(...this.state.GroceryItems.concat(this.state.ShoppingListItems).map(item => item.id)) + 1
+        console.log(this.state.GroceryItems.concat(this.state.ShoppingListItems).map(item => item.id))
+        console.log(ItemIndex, this.state)
+        this.setState(prevState => ({
+            GroceryItems: prevState.GroceryItems.concat([{ id: ItemIndex, product: value }])
+        }));
+    }
     render() {
         return (
             <div className="Container">
-                <GroceryList className="GroceryList" groceries={this.state.GroceryItems} moveItemToCart={this.moveItemToCart} />
-                <ShoppingCart className="ShoppingCart" cartItems={this.state.ShoppingListItems} deleteItem={this.deleteItem} />
+                <GroceryList
+                    className="GroceryList"
+                    groceries={this.state.GroceryItems}
+                    moveItemToCart={this.moveItemToCart}
+                    addItemtoGroceryItems={this.addItemtoGroceryItems}
+                />
+                <ShoppingCart
+                    className="ShoppingCart"
+                    cartItems={this.state.ShoppingListItems}
+                    deleteItem={this.deleteItem}
+                />
             </div>
         )
     }
 }
 export default Mycontainer
+

@@ -1,19 +1,33 @@
 .Container {
   display: flex;
+  justify-content: center;
+}
+nav{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+h2 {
+  text-align: center;
+}
+nav h1{
+  margin: 0;
 }
 .ShoppingCart{
-  background-color: coral;
+  /* background-color: coral; */
 }
 .GroceryList{
-  background-color: cornflowerblue;  
-}
-.List{
-  display: flex;
-  
+  /* background-color: cornflowerblue;   */
 }
 .ListItem{
   display: flex;
-  margin: 5px;
+  margin: 3px;
+  border-style: solid;
+  border-color: rgba(184, 181, 181, 0.541);
+  border-width: 1px;
+  border-radius: 4px;
 }
 .ListItem > *{
   margin: 5px;
@@ -22,7 +36,18 @@
   padding-left: 10px;
   font-size: 1em;
   font-weight: 600;
-  
+}
+.GroceryList > .ListItem:nth-child(odd) {
+  background: cornflowerblue;
+}
+.GroceryList > .ListItem:nth-child(even) {
+  background: rgb(65, 97, 156);
+}
+.ShoppingCart > .ListItem:nth-child(odd) {
+  background: coral;
+}
+.ShoppingCart > .ListItem:nth-child(even) {
+  background: rgb(172, 84, 52);
 }
 /* .App {
   text-align: center;

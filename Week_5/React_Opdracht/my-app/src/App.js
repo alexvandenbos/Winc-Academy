@@ -4,17 +4,14 @@ import Mycontainer from './Container';
 
 function App() {
   return (
-    // <div className="App">
-    <body className="App">
+    <div className="App">
       <nav>
+        <h1>Boodschappenlijst</h1>
       </nav>
       <main>
         <Mycontainer />
       </main>
-      <footer>
-      </footer>
-    </body>
-    // </div>
+    </div>
   );
 }
 
