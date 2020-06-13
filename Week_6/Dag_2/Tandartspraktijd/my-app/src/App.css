@@ -1,0 +1,8 @@
+.Week {
+    background-color: coral;
+    width: 100px;
+}
+.InputAppointment {
+    display: flex;
+    background-color:  cornflowerblue;
+}
