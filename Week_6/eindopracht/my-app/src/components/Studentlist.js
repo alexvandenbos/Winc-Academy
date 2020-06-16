@@ -2,10 +2,10 @@ import React from 'react'
 import Studentlistitem from './Studentlistitem'
 
 function Studentlist(props) {
-    //console.log(props)
+    console.log(props)
     return (
         <menu className="StudentList">
-            <h2>Students</h2>
+            <h2>Winc Students</h2>
             {props.students.map(student =>
                 <Studentlistitem
                     key={student.id}
@@ -13,6 +13,7 @@ function Studentlist(props) {
                     fullname={student.name + " " + student.surname}
                     currentDisplay={student.display}
                     checkbox={props.checkbox}
+                    button={props.button}
                 />)}
         </menu>
     )

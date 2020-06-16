@@ -6,10 +6,10 @@ const Students = [
         surname: "Jansen",
         projects: {
             W1D1_1: [2, 3, "my lorem ipsum feedback"],
-            W1D1_2: [3, 4, "my lorem ipsum feedback"],
-            W1D1_3: [4, 5, "my lorem ipsum feedback"],
+            W2D1_2: [3, 4, "my lorem ipsum feedback"],
+            W2D1_7: [4, 5, "my lorem ipsum feedback"],
             W1D1_4: [2, 4, "my lorem ipsum feedback"],
-            W1D1_5: [1, 1, "my lorem ipsum feedback"]
+            W2D1_5: [1, 1, "my lorem ipsum feedback"]
         }
     },
     {
@@ -19,10 +19,10 @@ const Students = [
         surname: "Frits",
         projects: {
             W1D1_1: [4, 4, "my lorem ipsum feedback"],
-            W1D1_2: [2, 4, "my lorem ipsum feedback"],
-            W1D1_3: [4, 5, "my lorem ipsum feedback"],
+            W2D1_2: [2, 4, "my lorem ipsum feedback"],
+            W1D5_3: [4, 5, "my lorem ipsum feedback"],
             W1D1_4: [2, 5, "my lorem ipsum feedback"],
-            W1D1_5: [4, 4, "my lorem ipsum feedback"]
+            W4D1_5: [4, 4, "my lorem ipsum feedback"]
         }
     },
     {
@@ -35,7 +35,7 @@ const Students = [
             W1D1_2: [3, 2, "my lorem ipsum feedback"],
             W1D1_3: [4, 4, "my lorem ipsum feedback"],
             W1D1_4: [2, 3, "my lorem ipsum feedback"],
-            W1D1_5: [1, 4, "my lorem ipsum feedback"]
+            W1D1_5: [1, 4, "my lorem ipsum feedback"],
         }
     },
     {

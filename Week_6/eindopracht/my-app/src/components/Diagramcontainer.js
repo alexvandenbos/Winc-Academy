@@ -2,7 +2,7 @@ import React from 'react'
 import Diagramview from './Diagramview'
 
 function Diagramcontainer(props) {
-    //console.log(props)
+    // console.log(props)
 
     return (
         <div>

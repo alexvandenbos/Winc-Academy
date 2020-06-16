@@ -1,6 +1,38 @@
-menu{
-  background-color: rgba(100, 148, 237, 0.39);
+.App {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
 }
-menu li{
+menu{
+  background-color: #00003f;
+  display: flex;
+  flex-direction: column 
+}
+.StudentList {
+  display: flex;
+  width: min-content;
+  padding: 0;
+  margin-top: 0;
+
+}
+.StudentList h2 {
+  color: white;
+  padding-left: 16px;
+}
+menu li {
+  padding: 1em;
   list-style: none;
+  color: white;
+  width: 400px;
+}
+menu li button {
+  float: right;
+}
+menu :nth-of-type(even) {
+  border-bottom: 2px solid white;
+  border-top:2px solid white;
+
+}
+.chart {
+  top: -100px;
+  width: 100%;
 }
